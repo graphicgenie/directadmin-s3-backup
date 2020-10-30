@@ -37,8 +37,8 @@ chmod +x install.sh
 sh install.sh
 
 # As Root
-chmod +x /home/admin/tools/install.sh
-sh /home/admin/tools/install.sh
+chmod +x `/home/admin/tools/directadmin-s3-backup/install_root.sh
+sh /home/admin/tools/directadmin-s3-backup/install_root.sh
 ```
 
 Update `/home/admin/tools/directadmin-s3-backup/config.php` with your AWS access keys, region and bucket name

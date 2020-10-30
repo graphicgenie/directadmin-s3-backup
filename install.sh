@@ -2,7 +2,6 @@
 
 mkdir -p /home/admin/tools/
 wget -O /home/admin/tools/s3backup.zip https://github.com/graphicgenie/directadmin-s3-backup/archive/master.zip
-wget -O /home/admin/tools/install.sh https://raw.githubusercontent.com/graphicgenie/directadmin-s3-backup/master/install_root.sh
 chmod +x /home/admin/tools/install.sh
 cd /home/admin/tools
 unzip s3backup.zip
