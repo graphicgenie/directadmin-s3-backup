@@ -10,8 +10,8 @@ return [
         'key' => 'YOUR_AWS_KEY',
         'secret' => 'YOUR_AWS_SECRET',
     ],
-    'region' => 'us-east-1',
+    'region' => 'eu-west-3',
     'bucket'=>'you-bucket-name',
     'expiration'=>3,
-	//'endpoint' => 'https://sfo2.digitaloceanspaces.com', //enable this for digitalocean space	
+	'endpoint' => 'https://ams3.digitaloceanspaces.com', //enable this for digitalocean space
 ];
