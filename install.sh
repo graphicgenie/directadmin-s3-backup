@@ -11,7 +11,7 @@ php -r "if (hash_file('sha384', 'composer-setup.php') === 'c31c1e292ad7be5f49291
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 php composer.phar update
-mkdir -p /usr/local/directadmin/scripts/custom
-wget -O /usr/local/directadmin/scripts/custom/ftp_upload.php https://raw.githubusercontent.com/graphicgenie/directadmin-s3-backup/master/upload-script.sh
-chmod +x /usr/local/directadmin/scripts/custom/ftp_upload.php
-cp config.sample.php config.php
+sudo mkdir -p /usr/local/directadmin/scripts/custom
+sudo wget -O /usr/local/directadmin/scripts/custom/ftp_upload.php https://raw.githubusercontent.com/graphicgenie/directadmin-s3-backup/master/upload-script.sh
+sudo chmod +x /usr/local/directadmin/scripts/custom/ftp_upload.php
+sudo cp config.sample.php config.php
