@@ -41,7 +41,7 @@ chmod +x /home/admin/tools/install.sh
 sh /home/admin/tools/install.sh
 ```
 
-Update `/home/admin/tools/config.php` with your AWS access keys, region and bucket name
+Update `/home/admin/tools/directadmin-s3-backup/config.php` with your AWS access keys, region and bucket name
 
 Finally, go to `DirectAdmin \ Admin Backup/Transfer` to create Cron Schedule backup, select FTP for the backup location.
 
