@@ -15,6 +15,7 @@
     "source": "https://github.com/powerkernel/directadmin-s3-backup"
   },
   "require": {
-    "aws/aws-sdk-php": "*"
+    "aws/aws-sdk-php": "*",
+    "google/cloud-storage": "^1.23"
   }
 }

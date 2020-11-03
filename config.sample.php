@@ -14,4 +14,11 @@ return [
     'bucket'=>'you-bucket-name',
     'expiration'=>3,
 	'endpoint' => 'https://ams3.digitaloceanspaces.com', //enable this for digitalocean space
+
+    'google' => [
+        'credentials' => [
+            'key' => 'googlekey.json',
+        ],
+        'bucket'=>'graphicgenie-bck01',
+    ]
 ];

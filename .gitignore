@@ -32,3 +32,4 @@ phpunit.phar
 
 # sensitive information
 config.php
+googlekey.json
