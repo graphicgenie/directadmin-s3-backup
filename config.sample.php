@@ -13,12 +13,12 @@ return [
     'region' => 'eu-west-3',
     'bucket'=>'you-bucket-name',
     'expiration'=>3,
-	'endpoint' => 'https://ams3.digitaloceanspaces.com', //enable this for digitalocean space
+	'endpoint' => 'ENDPOINT', //enable this for digitalocean space
 
     'google' => [
         'credentials' => [
-            'key' => 'googlekey.json',
+            'key' => 'GOOGLE_KEY_FILE',
         ],
-        'bucket'=>'graphicgenie-bck01',
+        'bucket'=>'GOOGLE_BUCKET',
     ]
 ];
