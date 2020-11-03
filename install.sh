@@ -12,4 +12,5 @@ php -r "if (hash_file('sha384', 'composer-setup.php') === 'c31c1e292ad7be5f49291
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 php composer.phar update
+php composer.phar dump-autoload
 cp config.sample.php config.php

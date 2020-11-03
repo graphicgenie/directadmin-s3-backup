@@ -37,7 +37,7 @@ chmod +x install.sh
 sh install.sh
 
 # As Root
-chmod +x `/home/admin/tools/directadmin-s3-backup/install_root.sh
+chmod +x /home/admin/tools/directadmin-s3-backup/install_root.sh
 sh /home/admin/tools/directadmin-s3-backup/install_root.sh
 ```
 
