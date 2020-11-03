@@ -19,7 +19,7 @@ $conf = require __DIR__ . '/config.php';
 $bucket = $conf['bucket'];
 $ftp_local_file=$argv[1];
 $ftp_remote_file=$argv[2];
-$ftp_path=$argv[3];
+//$ftp_path=$argv[3];
 
 // S3 Client
 $opts = [
@@ -124,7 +124,7 @@ if (!$hasLifeCycle) {
 // Upload
 $uploader = new MultipartUploader($client, $ftp_local_file, [
     'bucket' => $bucket,
-    'key' => $ftp_path .'/' . date('l') . '/' . $ftp_remote_file,
+    'key' => gethostname() .'/' . date('l') . '/' . $ftp_remote_file,
 ]);
 
 try {
