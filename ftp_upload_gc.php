@@ -20,14 +20,9 @@ $options = [
      'name' => gethostname() .'/' . date('l') . '/' . $ftp_remote_file,
 ];
 
-$object = $bucket->upload(
-     fopen(__DIR__ . '/file.txt', 'r'),
-     $options
-);
-
 try {
     $object = $bucket->upload(
-        fopen(__DIR__ . '/file.txt', 'r'),
+        fopen($ftp_local_file, 'r'),
         $options
     );
     echo "Upload complete: {$object->name()}\n";
