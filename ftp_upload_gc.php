@@ -7,15 +7,31 @@ $conf = require __DIR__ . '/config.php';
 
 $ftp_local_file=$argv[1];
 $ftp_remote_file=$argv[2];
-$ftp_path=$argv[3];
 
 // Authenticating with keyfile data.
 $storage = new StorageClient([
-    'keyFile' => json_decode(file_get_contents(__DIR__ . $conf['google']['credentials']['key']), true)
+    'keyFile' => json_decode(file_get_contents(__DIR__ . '/' . $conf['google']['credentials']['key']), true)
 ]);
 
 $bucket = $storage->bucket($conf['google']['bucket']);
 
-var_dump($bucket->upload(
-    fopen('file.txt', 'r')
-));
+$options = [
+     'resumable' => true,
+     'name' => gethostname() .'/' . date('l') . '/' . $ftp_remote_file,
+];
+
+$object = $bucket->upload(
+     fopen(__DIR__ . '/file.txt', 'r'),
+     $options
+);
+
+try {
+    $object = $bucket->upload(
+        fopen(__DIR__ . '/file.txt', 'r'),
+        $options
+    );
+    echo "Upload complete: {$object->name()}\n";
+} catch (InvalidArgumentException $e) {
+    echo $e->getMessage() . "\n";
+}
+
