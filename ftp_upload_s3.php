@@ -124,7 +124,7 @@ if (!$hasLifeCycle) {
 // Upload
 $uploader = new MultipartUploader($client, $ftp_local_file, [
     'bucket' => $bucket,
-    'key' => gethostname() .'/' . date('l') . '/' . $ftp_remote_file,
+    'key' => date('l') . '/' . $ftp_remote_file,
 ]);
 
 try {

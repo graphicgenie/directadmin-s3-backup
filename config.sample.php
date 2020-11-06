@@ -7,12 +7,12 @@
 
 return [
     'credentials' => [
-        'key' => 'YOUR_AWS_KEY',
-        'secret' => 'YOUR_AWS_SECRET',
+        'key' => 'YOUR_S3_KEY',
+        'secret' => 'YOUR_S3_SECRET',
     ],
-    'region' => 'eu-west-3',
-    'bucket'=>'you-bucket-name',
-    'expiration'=>3,
+    'region' => 'nl.dadup.eu',
+    'bucket'=> 'bucket_name',
+    'expiration'=> 3,
 	'endpoint' => 'ENDPOINT', //enable this for digitalocean space
 
     'google' => [
